@@ -1,0 +1,5 @@
+C:\Users\Marchelo\Source\Repos\Zanaetchii\Zanaetchii.DbContext\bin\Debug\netstandard2.0\Zanaetchii.DbContext.deps.json
+C:\Users\Marchelo\Source\Repos\Zanaetchii\Zanaetchii.DbContext\bin\Debug\netstandard2.0\Zanaetchii.DbContext.dll
+C:\Users\Marchelo\Source\Repos\Zanaetchii\Zanaetchii.DbContext\obj\Debug\netstandard2.0\Zanaetchii.DbContext.csprojAssemblyReference.cache
+C:\Users\Marchelo\Source\Repos\Zanaetchii\Zanaetchii.DbContext\obj\Debug\netstandard2.0\Zanaetchii.DbContext.AssemblyInfoInputs.cache
+C:\Users\Marchelo\Source\Repos\Zanaetchii\Zanaetchii.DbContext\obj\Debug\netstandard2.0\Zanaetchii.DbContext.AssemblyInfo.cs
