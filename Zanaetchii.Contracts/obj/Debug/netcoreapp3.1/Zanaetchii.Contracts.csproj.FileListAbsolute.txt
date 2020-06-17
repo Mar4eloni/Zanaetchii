@@ -1,0 +1,12 @@
+C:\Users\Marchelo\Source\Zanaetchii\Zanaetchii.Contracts\bin\Debug\netcoreapp3.1\Zanaetchii.Contracts.deps.json
+C:\Users\Marchelo\Source\Zanaetchii\Zanaetchii.Contracts\bin\Debug\netcoreapp3.1\Zanaetchii.Contracts.dll
+C:\Users\Marchelo\Source\Zanaetchii\Zanaetchii.Contracts\bin\Debug\netcoreapp3.1\Zanaetchii.Contracts.pdb
+C:\Users\Marchelo\Source\Zanaetchii\Zanaetchii.Contracts\bin\Debug\netcoreapp3.1\Zanaetcii.Entities.dll
+C:\Users\Marchelo\Source\Zanaetchii\Zanaetchii.Contracts\bin\Debug\netcoreapp3.1\Zanaetcii.Entities.pdb
+C:\Users\Marchelo\Source\Zanaetchii\Zanaetchii.Contracts\obj\Debug\netcoreapp3.1\Zanaetchii.Contracts.csprojAssemblyReference.cache
+C:\Users\Marchelo\Source\Zanaetchii\Zanaetchii.Contracts\obj\Debug\netcoreapp3.1\Zanaetchii.Contracts.AssemblyInfoInputs.cache
+C:\Users\Marchelo\Source\Zanaetchii\Zanaetchii.Contracts\obj\Debug\netcoreapp3.1\Zanaetchii.Contracts.AssemblyInfo.cs
+C:\Users\Marchelo\Source\Zanaetchii\Zanaetchii.Contracts\obj\Debug\netcoreapp3.1\Zanaetchii.Contracts.csproj.CoreCompileInputs.cache
+C:\Users\Marchelo\Source\Zanaetchii\Zanaetchii.Contracts\obj\Debug\netcoreapp3.1\Zanaetchii.Contracts.csproj.CopyComplete
+C:\Users\Marchelo\Source\Zanaetchii\Zanaetchii.Contracts\obj\Debug\netcoreapp3.1\Zanaetchii.Contracts.dll
+C:\Users\Marchelo\Source\Zanaetchii\Zanaetchii.Contracts\obj\Debug\netcoreapp3.1\Zanaetchii.Contracts.pdb

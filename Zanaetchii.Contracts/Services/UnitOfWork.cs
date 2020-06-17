@@ -18,7 +18,7 @@ namespace Zanaetchii.Contracts.Services
             get { 
                 if (_workerRepo == null)
                 {
-                    _workerRepo = new WorkerRepo(_context, this);
+                    //_workerRepo = new WorkerRepo(_context, this);
                 }
                 return _workerRepo;
             } 

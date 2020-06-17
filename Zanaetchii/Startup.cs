@@ -11,7 +11,8 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 using Zanaetcii.Entities.Context;
 using Microsoft.EntityFrameworkCore;
-
+using Microsoft.AspNetCore.Identity.UI;
+using Zanaetcii.Entities.Models;
 
 namespace Zanaetchii
 {
@@ -31,6 +32,8 @@ namespace Zanaetchii
             services.AddDbContext<MyDbContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("IdentityConnection"))
             );
+            //services.AddDefaultIdentity<WorkGiver>(options => options.SignIn.RequireConfirmedAccount = true)
+            //    .AddEntityFrameworkStores<MyDbContext>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

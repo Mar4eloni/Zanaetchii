@@ -19,8 +19,8 @@ namespace Zanaetcii.Entities.Models
 
         [ForeignKey("WorkGiverId")]
         public virtual WorkGiver WorkGiver { get; set; }
+        
 
-        [ForeignKey("CommentId")]
         public virtual ICollection<Comment> Comments { get; set; }
 
         [ForeignKey("WorkerId")]

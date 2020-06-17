@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Marchelo\\Source\\Repos\\Zanaetchii\\Zanaetchii\\Zanaetchii.csproj": {}
+    "C:\\Users\\Marchelo\\Source\\Zanaetchii\\Zanaetchii\\Zanaetchii.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Marchelo\\Source\\Repos\\Zanaetchii\\Zanaetchii\\Zanaetchii.csproj": {
+    "C:\\Users\\Marchelo\\Source\\Zanaetchii\\Zanaetchii\\Zanaetchii.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Marchelo\\Source\\Repos\\Zanaetchii\\Zanaetchii\\Zanaetchii.csproj",
+        "projectUniqueName": "C:\\Users\\Marchelo\\Source\\Zanaetchii\\Zanaetchii\\Zanaetchii.csproj",
         "projectName": "Zanaetchii",
-        "projectPath": "C:\\Users\\Marchelo\\Source\\Repos\\Zanaetchii\\Zanaetchii\\Zanaetchii.csproj",
+        "projectPath": "C:\\Users\\Marchelo\\Source\\Zanaetchii\\Zanaetchii\\Zanaetchii.csproj",
         "packagesPath": "C:\\Users\\Marchelo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Marchelo\\Source\\Repos\\Zanaetchii\\Zanaetchii\\obj\\",
+        "outputPath": "C:\\Users\\Marchelo\\Source\\Zanaetchii\\Zanaetchii\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "c:\\program files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -30,8 +30,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\Marchelo\\Source\\Repos\\Zanaetchii\\Zanaetcii.Entities\\Zanaetcii.Entities.csproj": {
-                "projectPath": "C:\\Users\\Marchelo\\Source\\Repos\\Zanaetchii\\Zanaetcii.Entities\\Zanaetcii.Entities.csproj"
+              "C:\\Users\\Marchelo\\Source\\Zanaetchii\\Zanaetcii.Entities\\Zanaetcii.Entities.csproj": {
+                "projectPath": "C:\\Users\\Marchelo\\Source\\Zanaetchii\\Zanaetcii.Entities\\Zanaetcii.Entities.csproj"
               }
             }
           }
@@ -45,6 +45,30 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Microsoft.AspNet.Identity.Core": {
+              "target": "Package",
+              "version": "[2.2.3, )"
+            },
+            "Microsoft.AspNet.Identity.Owin": {
+              "target": "Package",
+              "version": "[2.2.3, )"
+            },
+            "Microsoft.AspNet.WebApi.Client": {
+              "target": "Package",
+              "version": "[5.2.7, )"
+            },
+            "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
@@ -55,11 +79,23 @@
               "target": "Package",
               "version": "[3.1.5, )"
             },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
               "version": "[3.1.5, )"
+            },
+            "Microsoft.Owin.Host.SystemWeb": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.3, )"
             }
           },
           "imports": [
@@ -84,14 +120,14 @@
         }
       }
     },
-    "C:\\Users\\Marchelo\\Source\\Repos\\Zanaetchii\\Zanaetcii.Entities\\Zanaetcii.Entities.csproj": {
+    "C:\\Users\\Marchelo\\Source\\Zanaetchii\\Zanaetcii.Entities\\Zanaetcii.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Marchelo\\Source\\Repos\\Zanaetchii\\Zanaetcii.Entities\\Zanaetcii.Entities.csproj",
+        "projectUniqueName": "C:\\Users\\Marchelo\\Source\\Zanaetchii\\Zanaetcii.Entities\\Zanaetcii.Entities.csproj",
         "projectName": "Zanaetcii.Entities",
-        "projectPath": "C:\\Users\\Marchelo\\Source\\Repos\\Zanaetchii\\Zanaetcii.Entities\\Zanaetcii.Entities.csproj",
+        "projectPath": "C:\\Users\\Marchelo\\Source\\Zanaetchii\\Zanaetcii.Entities\\Zanaetcii.Entities.csproj",
         "packagesPath": "C:\\Users\\Marchelo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Marchelo\\Source\\Repos\\Zanaetchii\\Zanaetcii.Entities\\obj\\",
+        "outputPath": "C:\\Users\\Marchelo\\Source\\Zanaetchii\\Zanaetcii.Entities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "c:\\program files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -101,14 +137,14 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netstandard2.0"
+          "netcoreapp3.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netstandard2.0": {
+          "netcoreapp3.1": {
             "projectReferences": {}
           }
         },
@@ -119,9 +155,15 @@
         }
       },
       "frameworks": {
-        "netstandard2.0": {
+        "netcoreapp3.1": {
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[3.1.5, )"
             },
@@ -129,17 +171,15 @@
               "target": "Package",
               "version": "[3.1.5, )"
             },
+            "Microsoft.EntityFrameworkCore.SqlServer.Design": {
+              "target": "Package",
+              "version": "[1.1.6, )"
+            },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
               "version": "[3.1.5, )"
-            },
-            "NETStandard.Library": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.0.3, )",
-              "autoReferenced": true
             },
             "System.ComponentModel.Annotations": {
               "target": "Package",
@@ -156,6 +196,11 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
           "runtimeIdentifierGraphPath": "c:\\program files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
         }
       }

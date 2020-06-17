@@ -7,7 +7,7 @@ using Zanaetcii.Entities.Models;
 
 namespace Zanaetchii.Contracts.Services
 {
-    public class WorkGiverRepo : GenericRepository<WorkGiver>, IWorkerRepo
+    public class WorkGiverRepo : GenericRepository<Worker>, IWorkerRepo
     {
         protected readonly MyDbContext _context;
 

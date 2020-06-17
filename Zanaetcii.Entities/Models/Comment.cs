@@ -15,11 +15,9 @@ namespace Zanaetcii.Entities.Models
         public int CommentId { get; set; }
 
         [ForeignKey("WorkerId")]
-        [Required]
         public Worker Worker { get; set; }
 
         [ForeignKey("WorkGiverId")]
-        [Required]
         public WorkGiver WorkGiver { get; set; }
 
         [ForeignKey("WorkId")]

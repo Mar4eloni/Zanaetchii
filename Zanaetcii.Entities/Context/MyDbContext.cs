@@ -41,6 +41,7 @@ namespace Zanaetcii.Entities.Context
         public DbSet<Worker> Workers { get; set; }
         public DbSet<WorkField> WorkeFields { get; set; }
         public DbSet<WorkGiver> WorkGivers { get; set; }
+       // public DbSet<ProjectRole> ProjectRoles { get; set; }
 
         //protected override void OnModelCreating(ModelBuilder modelBuilder)
         //{
