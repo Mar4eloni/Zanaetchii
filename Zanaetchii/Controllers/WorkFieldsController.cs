@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Zanaetchii.Contracts.Interfaces;
+using Zanaetchii.Models.ViewModels;
 using Zanaetcii.Entities.Context;
 using Zanaetcii.Entities.Models;
 
@@ -12,41 +15,48 @@ namespace Zanaetchii.Controllers
 {
     public class WorkFieldsController : Controller
     {
-        private readonly MyDbContext _context;
+        //private readonly MyDbContext _context;
+        private readonly IWorkFieldsRepo _context;
+        private readonly IMapper _mapper;
 
-        public WorkFieldsController(MyDbContext context)
+        public WorkFieldsController(IWorkFieldsRepo context, IMapper mapper)
         {
             _context = context;
+            _mapper = mapper;
         }
 
         // GET: WorkFields
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            return View(await _context.WorkeFields.ToListAsync());
+            //var AllWorkFields = _context.GetAll().ToList();
+            var AllWorkFieldsMapped = _mapper.Map<IEnumerable<WorkField>, IEnumerable<WorkFieldViewModel>>(_context.GetAll());//AllWorkFields.Select(_mapper.Map<WorkField, WorkFieldViewModel>);
+
+            return View(AllWorkFieldsMapped);
         }
 
         // GET: WorkFields/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
+            //if (id == null)
+            //{
+            //    return NotFound();
+            //}
 
-            var workField = await _context.WorkeFields
-                .FirstOrDefaultAsync(m => m.WorkFieldId == id);
-            if (workField == null)
-            {
-                return NotFound();
-            }
+            //var workField = await _context.WorkeFields
+            //    .FirstOrDefaultAsync(m => m.WorkFieldId == id);
+            //if (workField == null)
+            //{
+            //    return NotFound();
+            //}
 
-            return View(workField);
+            return View();//(workField);
         }
 
         // GET: WorkFields/Create
         public IActionResult Create()
         {
-            return View();
+            var model = new WorkFieldViewModel();
+            return View(model);
         }
 
         // POST: WorkFields/Create
@@ -58,26 +68,29 @@ namespace Zanaetchii.Controllers
         {
             if (ModelState.IsValid)
             {
+                var NewWorkField = _mapper.Map<WorkField>(workField);
                 _context.Add(workField);
-                await _context.SaveChangesAsync();
+                //await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(workField);
+            //return View(workField);
+            return View();
         }
 
         // GET: WorkFields/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public IActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return NotFound();
             }
-
-            var workField = await _context.WorkeFields.FindAsync(id);
+            
+            var workField = _mapper.Map<WorkFieldViewModel>(_context.Find(x => x.WorkFieldId == id));
             if (workField == null)
             {
                 return NotFound();
             }
+
             return View(workField);
         }
 
@@ -86,7 +99,7 @@ namespace Zanaetchii.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("WorkFieldId,Name")] WorkField workField)
+        public IActionResult Edit(int id, [Bind("WorkFieldId,Name")] WorkField workField)
         {
             if (id != workField.WorkFieldId)
             {
@@ -97,8 +110,8 @@ namespace Zanaetchii.Controllers
             {
                 try
                 {
-                    _context.Update(workField);
-                    await _context.SaveChangesAsync();
+                    //_context.Update(workField);
+                    _context.Update(_mapper.Map<WorkField>(workField));
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -123,9 +136,9 @@ namespace Zanaetchii.Controllers
             {
                 return NotFound();
             }
+            //_context.Remove(_context.Get(id));
+            var workField = _mapper.Map<WorkFieldViewModel>(_context.Find(x => x.WorkFieldId == id));
 
-            var workField = await _context.WorkeFields
-                .FirstOrDefaultAsync(m => m.WorkFieldId == id);
             if (workField == null)
             {
                 return NotFound();
@@ -139,15 +152,15 @@ namespace Zanaetchii.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var workField = await _context.WorkeFields.FindAsync(id);
-            _context.WorkeFields.Remove(workField);
-            await _context.SaveChangesAsync();
+            var workField = _context.Get(id);
+            _context.Remove(workField);//await _context.WorkeFields.FindAsync(id);
             return RedirectToAction(nameof(Index));
         }
 
         private bool WorkFieldExists(int id)
         {
-            return _context.WorkeFields.Any(e => e.WorkFieldId == id);
+            //return _context.WorkeFields.Any(e => e.WorkFieldId == id);
+            return false;
         }
     }
 }

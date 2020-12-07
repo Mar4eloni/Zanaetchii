@@ -12,7 +12,12 @@ using Microsoft.Extensions.Options;
 using Zanaetcii.Entities.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity.UI;
+using Zanaetchii.Contracts.Interfaces;
+using Zanaetchii.Contracts.Services;
 using Zanaetcii.Entities.Models;
+using Microsoft.AspNetCore.Identity;
+using AutoMapper;
+using Zanaetchii.Profiles;
 
 namespace Zanaetchii
 {
@@ -32,8 +37,41 @@ namespace Zanaetchii
             services.AddDbContext<MyDbContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("IdentityConnection"))
             );
-            //services.AddDefaultIdentity<WorkGiver>(options => options.SignIn.RequireConfirmedAccount = true)
+            services.AddDbContext<UserDbContext>(options =>
+           options.UseSqlServer(Configuration.GetConnectionString("IdentityConnection"))
+           );
+
+            services.AddIdentity<Users, ProjectRole>(cfg => {
+                cfg.User.RequireUniqueEmail = true;
+            }).AddEntityFrameworkStores<UserDbContext>();
+
+            // registering all services
+            services.AddScoped<IApplicationRepo, ApplicationRepo>();
+            services.AddScoped<ICommentsRepo, CommentsRepo>();
+            services.AddSingleton(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+            services.AddScoped<IRatingsRepo, RatingsRepo>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<IWorkerRepo, WorkerRepo>();
+            services.AddScoped<IWorkFieldsRepo, WorkFieldsRepo>();
+            services.AddScoped<IWorkGiverRepo, WorkGiverRepo>();
+            services.AddScoped<IWorkRepo, WorkRepo>();
+
+            // auto mapper for the view models
+            //services.AddAutoMapper(typeof(Startup));
+            var mapperConfig = new MapperConfiguration(mc =>
+            {
+                mc.AddProfile(new MapingProfiles());
+            });
+
+            IMapper mapper = mapperConfig.CreateMapper();
+            services.AddSingleton(mapper);
+
+            services.AddControllersWithViews();
+            services.AddRazorPages();
+            //services.AddIdentity<Users, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = true)
             //    .AddEntityFrameworkStores<MyDbContext>();
+
+            //services.AddSingleton<IWorkFieldsRepo, WorkFieldsRepo>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -55,6 +93,7 @@ namespace Zanaetchii
             app.UseRouting();
 
             app.UseAuthorization();
+            app.UseAuthentication();
 
             app.UseEndpoints(endpoints =>
             {
@@ -62,6 +101,7 @@ namespace Zanaetchii
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+            
         }
     }
 }
