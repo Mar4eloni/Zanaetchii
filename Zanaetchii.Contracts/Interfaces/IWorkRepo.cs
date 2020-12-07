@@ -8,5 +8,9 @@ namespace Zanaetchii.Contracts.Interfaces
     public interface IWorkRepo : IGenericRepository<Work>
     {
         IEnumerable<Comment> GetAllComentsForJob(int? id);
+
+        IEnumerable<Work> GetAllJobs();
+
+        Work GetJobById(int id);
     }
 }

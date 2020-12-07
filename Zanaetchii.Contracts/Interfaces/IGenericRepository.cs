@@ -9,9 +9,10 @@ namespace Zanaetchii.Contracts.Interfaces
     {
         TEntity Get(int id);
         IEnumerable<TEntity> GetAll();
-        IEnumerable<TEntity> Find(Expression<Func<TEntity, bool>> predicate);
+        TEntity Find(Expression<Func<TEntity, bool>> predicate);
 
         void Add(TEntity entity);
+        TEntity Update(TEntity entity);
         void AddRange(IEnumerable<TEntity> entities);
 
         void Remove(TEntity entity);

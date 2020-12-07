@@ -11,8 +11,6 @@ namespace Zanaetchii.Contracts.Services
 {
     public class WorkRepo : GenericRepository<Work>, IWorkRepo
     {
-        protected readonly MyDbContext _context;
-
         public WorkRepo(MyDbContext context) : base(context)
         {
 
@@ -22,6 +20,16 @@ namespace Zanaetchii.Contracts.Services
         {
             return  _context.Comments.Where(p => p.Work.WorkId == id).ToList();
 
+        }
+
+        public IEnumerable<Work> GetAllJobs()
+        {
+            return _context.Jobs.ToList();
+        }
+
+        public Work GetJobById(int id)
+        {
+            return _context.Jobs.Where<Work>(p => p.WorkId == id).FirstOrDefault();
         }
     }
 }

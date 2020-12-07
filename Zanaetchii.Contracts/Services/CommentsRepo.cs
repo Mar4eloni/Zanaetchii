@@ -9,7 +9,7 @@ namespace Zanaetchii.Contracts.Services
 {
     public class CommentsRepo : GenericRepository<Comment>, ICommentsRepo
     {
-        protected readonly MyDbContext _context;
+       
 
         public CommentsRepo(MyDbContext context) : base(context)
         {

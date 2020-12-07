@@ -9,7 +9,7 @@ namespace Zanaetchii.Contracts.Services
 {
     public class ApplicationRepo : GenericRepository<Application>, IApplicationRepo
     {
-        protected readonly MyDbContext _context;
+       
 
         public ApplicationRepo(MyDbContext context) : base(context)
         {

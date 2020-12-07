@@ -8,5 +8,4 @@ C:\Users\Marchelo\Source\Zanaetchii\Zanaetcii.Entities\obj\Debug\netcoreapp3.1\Z
 C:\Users\Marchelo\Source\Zanaetchii\Zanaetcii.Entities\obj\Debug\netcoreapp3.1\Zanaetcii.Entities.dll
 C:\Users\Marchelo\Source\Zanaetchii\Zanaetcii.Entities\obj\Debug\netcoreapp3.1\Zanaetcii.Entities.pdb
 C:\Users\Marchelo\Source\Zanaetchii\Zanaetcii.Entities\obj\Debug\netcoreapp3.1\Zanaetcii.Entities.genruntimeconfig.cache
-C:\Users\Marchelo\Source\Zanaetchii\Zanaetcii.Entities\obj\Debug\netcoreapp3.1\Zanaetcii.Entities.csprojAssemblyReference.cache
 C:\Users\Marchelo\Source\Zanaetchii\Zanaetcii.Entities\obj\Debug\netcoreapp3.1\Zanaetcii.Entities.csproj.CoreCompileInputs.cache

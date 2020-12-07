@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Identity;
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Zanaetcii.Entities.Models
 {
-    public class Worker 
+    public class Worker
     {
         [Column("WorkerId")]
         [Key]

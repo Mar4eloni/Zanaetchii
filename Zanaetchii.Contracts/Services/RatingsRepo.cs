@@ -9,7 +9,6 @@ namespace Zanaetchii.Contracts.Services
 {
     public class RatingsRepo : GenericRepository<Rating>, IRatingsRepo
     {
-        protected readonly MyDbContext _context;
 
         public RatingsRepo(MyDbContext context) : base(context)
         {

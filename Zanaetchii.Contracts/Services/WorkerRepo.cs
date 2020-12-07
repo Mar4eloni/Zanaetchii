@@ -12,7 +12,6 @@ namespace Zanaetchii.Contracts.Services
 {
     public class WorkerRepo : GenericRepository<Worker>, IWorkerRepo
     {
-        protected readonly MyDbContext _context;
 
         public WorkerRepo(MyDbContext context) : base(context)
         {
