@@ -64,12 +64,12 @@ namespace Zanaetchii.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("WorkFieldId,Name")] WorkField workField)
+        public async Task<IActionResult> Create([Bind("WorkFieldId,Name")] WorkFieldViewModel workField)
         {
             if (ModelState.IsValid)
             {
                 var NewWorkField = _mapper.Map<WorkField>(workField);
-                _context.Add(workField);
+                _context.Add(NewWorkField);
                 //await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
@@ -84,8 +84,8 @@ namespace Zanaetchii.Controllers
             {
                 return NotFound();
             }
-            
-            var workField = _mapper.Map<WorkFieldViewModel>(_context.Find(x => x.WorkFieldId == id));
+            var test = _context.Get((int)id);
+            var workField = _mapper.Map<WorkFieldViewModel>(test);
             if (workField == null)
             {
                 return NotFound();
@@ -99,7 +99,7 @@ namespace Zanaetchii.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit(int id, [Bind("WorkFieldId,Name")] WorkField workField)
+        public IActionResult Edit(int id, [Bind("WorkFieldId,Name")] WorkFieldViewModel workField)
         {
             if (id != workField.WorkFieldId)
             {

@@ -68,17 +68,29 @@ namespace Zanaetchii.Controllers
         // GET: WorkerController/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            var entity = _context.Get(id);
+            if (entity == null)
+            {
+                return View();
+            }
+            var model = _mapper.Map<WorkerViewModel>(entity);
+            return View(model);
         }
 
         // POST: WorkerController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(int id, WorkerViewModel collection)
         {
             try
             {
-                return RedirectToAction(nameof(Index));
+                var mappedModel = _mapper.Map<Worker>(collection);
+                var result = _context.Update(mappedModel);
+                if (result != null)
+                {
+                    return RedirectToAction(nameof(Index));
+                }
+                return View();
             }
             catch
             {
@@ -89,6 +101,7 @@ namespace Zanaetchii.Controllers
         // GET: WorkerController/Delete/5
         public ActionResult Delete(int id)
         {
+
             return View();
         }
 

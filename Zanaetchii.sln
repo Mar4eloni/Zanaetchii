@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zanaetcii.Entities", "Zanae
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zanaetchii.Contracts", "Zanaetchii.Contracts\Zanaetchii.Contracts.csproj", "{C67DD3D3-049C-488A-91AB-CC7AF9F92B03}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zanaetchii.Tests", "Zanaetchii.Tests\Zanaetchii.Tests.csproj", "{DE7F0D49-351E-4D68-9815-1E210111AEBA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{C67DD3D3-049C-488A-91AB-CC7AF9F92B03}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C67DD3D3-049C-488A-91AB-CC7AF9F92B03}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C67DD3D3-049C-488A-91AB-CC7AF9F92B03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE7F0D49-351E-4D68-9815-1E210111AEBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE7F0D49-351E-4D68-9815-1E210111AEBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE7F0D49-351E-4D68-9815-1E210111AEBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE7F0D49-351E-4D68-9815-1E210111AEBA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
